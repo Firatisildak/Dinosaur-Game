@@ -1,0 +1,53 @@
+
+.game{
+    width: auto;
+    height: 300px;
+    margin: auto;
+    border: 3px solid black;
+    margin-top: 50px;
+}
+#dinosaur{
+ width: 130px;
+ height: 130px;
+ background-image: url(dinosaur.png);
+ background-size: 130px 130px;
+ position: relative;
+ top: 170px;
+}
+.jump{
+    /*animation: jump 0.95s linear; bu kod şu şekilde açıklanabilir;
+    animation-name: jump;
+    animation-duration: 0.95s;
+    animation-timing-function: linear; linear geçiş işlevi kullanılarak sonsuz kez tekrarlanır.*/
+    animation: jump 0.95s linear;
+}
+
+@keyframes jump{
+    /*alttaki kod bukoğu 0% başlangıç konumunu 100px yapar daha sonra yukarıdan aşağıya inişe geçeceği için
+    30px diye azalıyor.*/
+    0%{
+        top:100px;
+    }
+    100%{
+        top:30px;
+    }
+}
+#cactus{
+    width: 60px;
+    height: 50px;
+    position: relative;
+    top:120px;
+    left: 600px;
+    background-image: url(cactus.png);
+    background-size: 60px 50px;
+    animation: engel 1s infinite linear;
+}
+
+@keyframes engel{
+    0%{
+        left: 600px;
+    }
+    100%{
+        left: -30px;
+    }
+}
